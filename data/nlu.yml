@@ -1,0 +1,227 @@
+version: "3.1"
+
+nlu:
+
+- intent: asking_for_address
+  examples: |
+   - what is the address of uni Rostock?
+   - tell me pelase about the uni Rostock address
+   - Uni Rostock address
+   - Address of university
+
+- intent: asking_for_email
+  examples: |
+   - Give me the email
+   - i want to know the email of uni rostok
+   - could you give me the email of uni rostock 
+   - what is the email of uni rostock
+   - Uni Rostock email
+   - email 
+  
+- intent: asking_for_language_skills
+  examples: |
+   - What language skills are required for a guest student?
+   - the language skills for guest student 
+   - what are the necssary language skills for international students?
+   - language skills for internaional students
+
+- intent: asking_for_ariving_to_rostock
+  examples: |
+   - What do I need to do first when I arrive in Rostock? 
+   - the first thing i need to do when i am arriving to uni rostock?
+   - can you tell me, what should i do when i will arivie to rostock?
+   - arriving to rostock
+
+
+- intent: asking_for_live_cost_in_Rostock
+  examples: |
+   - how much mony i need per month?
+   - life costs in Rostock
+   - the needed mony for life cost in Rostock
+   - How much money do I need in Rostock?
+
+- intent: asking_for_Residence_in_Rostock
+  examples: |
+   - i need residence please
+   - i need to book room at uni rostock
+   - booking room during the study
+   - i need permenant residence at uni rostock during the study
+
+
+- intent: asking_for_help
+  examples: |
+   - i need help please
+   - can you please help me
+   - i need your help please 
+   - Help please
+   - help me
+
+- intent: enter_data
+  examples: |
+    - my name is [aws](name)
+    - my name is [mohamad](name)
+    - my name us [rawan](name)
+    - my name is [michae](name)
+    - my name is [Birger](name)
+    - i'am called [Pauel](name)
+    - I am [name](name)
+    - [a@outlook.de](email)
+    - [aws@oulook.de](email)
+    - [ahmad@yahoo.com](email)
+    - hi, my name is [aws](name)
+    - hello, my name is [rawann](name)
+    - Moin, my name is [Birger](name)
+    - Hello, my name is [Johhan](name)
+    - [Hosma](name)
+    - [Amer](name)
+    - [johann@outlook.de](email)
+    - [mundt@gamil.com](email)
+  
+- intent: out_of_scope
+  examples: |
+    - The weather is good
+    - Today
+    - Try it out broken
+    - What day is it today?
+    - What did you eat yesterday?
+    - help with my life
+    - αστεία λές
+    - rasa codigo abierto
+    - 卧槽
+    - مرحبا
+    - هل تستطيعين فهم العربية
+    - كيف حالك 
+
+- intent: asking_what_is_my_name
+  examples: |
+    - Can you tell me my name?
+    - Can you tell me what I am called?
+    - Do I have a name?
+    - Do I have a name? What is it?
+    - Do you know my name?
+    - Do you know what my name is?
+    - Explain my name to me.
+    - I have a name, what is it?
+    - I'd like to know my name
+    - I'd like to know what my name is
+    - Inform me what my name is
+    
+
+- intent: chitchat_ask_howdoing
+  examples: |
+    - Ahoy matey how are you?
+    - Are you ok?
+    - are you man
+    - Do you feel good?
+    - How's it going
+    - How's it hanging?
+    - How's life treating you friend?
+    - What's up
+    - What's up man
+    - and you
+    - are you alright
+
+- intent: thank
+  examples: |
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you
+    - Thank you Sara
+    - Thank you so much
+    - Thank's!
+    - Thanks
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+ 
+  
+
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
