@@ -1,98 +1,124 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - asking_for_address
-  - asking_for_ariving_to_rostock
-  - asking_for_language_skills
-  - asking_for_live_cost_in_Rostock
-  - asking_for_email
-  - asking_what_is_my_name
-  - out_of_scope
-  - chitchat_ask_howdoing
-  - asking_for_help
-  - enter_data:
-      use_entities: true
-
+- affirm
+- asking_about_mentioned_things
+- asking_for_address
+- asking_for_ariving_to_rostock
+- asking_for_email
+- asking_for_help
+- asking_for_language_skills
+- asking_for_live_cost_in_Rostock
+- asking_for_starting
+- bot_challenge
+- chitchat_ask_howdoing
+- deny
+- enter_data:
+    use_entities: true
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- out_of_scope
 entities:
-- email
 - name
-
+- email
 slots:
   email:
     type: text
     mappings:
     - type: from_entity
-      entity: entity_name
+      entity: email
   name:
     type: text
     mappings:
     - type: from_entity
-      entity: entity_name
-
-
+      entity: name
+  like_uni_rostock:
+    type: bool
+    mappings:
+    - type: custom
+  name_is_asked:
+    type: bool
+    initial_value: false
+    mappings:
+    - type: custom
 responses:
-
+  utter_askig_for_starting:
+  - text: Hi i am uni rostock bot, i can help you to know about uni rostock FAQs, do you like to know about uni rostock?
   utter_asking_for_address:
-  - text: "You can find the main building of uni rostock in: Universitätsplatz 118055 Rostock"
-
+  - text: 'You can find the main building of uni rostock in: Universitätsplatz 118055 Rostock'
   utter_asking_for_ariving_to_rostock:
-  - text: "We have prepared a checklist for you with the necessary information regarding the first steps after your arrival in Rostock. You can find the information [here](https://www.uni-rostock.de/en/international-affairs/incoming/gueststudies-erasmus/after-arrival/)."
-
+  - text: We have prepared a checklist for you with the necessary information regarding the first steps after your arrival in Rostock. You can find the information [here](https://www.uni-rostock.de/en/international-affairs/incoming/gueststudies-erasmus/after-arrival/).
   utter_asking_for_language_skills:
-  - text: "If you are attending courses taught in German: Language certificate German B1 in accordance with CEFR 
-            Note: For application purposes, it is adequate to provide confirmation of current participation in a B1 language course, in combination with your A2 certificate (if available) - the B1 certificate submission can be done at a later date by the start of the semester."
-  
+  - text: 'If you are attending courses taught in German: Language certificate German B1 in accordance with CEFR Note: For application purposes, it is adequate to provide confirmation of current participation in a B1 language course, in combination with your A2 certificate (if available) - the B1 certificate submission can be done at a later date by the start of the semester.'
   utter_asking_for_live_cost_in_Rostock:
-  - text: "Foreign students from non-EU countries need financial proof for student visa. They have to prove 934 Euro/month for the visa application"
-
+  - text: Foreign students from non-EU countries need financial proof for student visa. They have to prove 934 Euro/month for the visa application
   utter_asking_for_email:
-  - text: "Uni Rostock email is Universität-rostock@rostock.de"
-
+  - text: Uni Rostock email is Universität-rostock@rostock.de
   utter_says_user_name:
   - text: You have a nice name {name}!, you already told me that!
-  
   utter_never_says_name:
   - text: Till know, you have not told me your name, but it is very nice to hear about that now
-  
+  utter_do_not_say_the_name:
+  - text: But till know you do not say me your name, could you please tell me your name?
   utter_chitchat_ask_howdoing:
   - text: I'm great! Thanks for asking.
   - text: I'm good, thanks!
   - text: A little bit too warm, otherwise fine.
   - text: A little bit cold, otherwise fine.
-
-  
   utter_asking_for_residence:
-  - text: "You can find more informations about the residence [here](https://www.stw-rw.de/en.html)"
-  
+  - text: You can find more informations about the residence [here](https://www.stw-rw.de/en.html)
   utter_out_of_scope:
   - text: I can't help you with that, I'm sorry.
-  
-  utter_greet:
-  - text: "Hey! How are you?, i am uni Rostock bot, i can help you to answer the FAQ questions about uni Rostock"
-
+  utter_greet_noname:
+  - text: Hey! How are you?, i am uni Rostock bot, i can help you to answer the FAQ questions about uni Rostock
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
+  utter_asking_for_help:
+  - text: How i can help you to know more about uni rostock?
+  utter_ask_feedback:
+  - buttons:
+    - payload: '/feedback{{"feedback_value": "positive"}}'
+      title: 👍
+    - payload: '/feedback{{"feedback_value": "negative"}}'
+      title: 👎
+    text: How is this conversation going?
+  utter_thank:
+  - text: You are welcome 😄
+  utter_react_negative:
+  - text: 😕
+  - text: 😞
+  - text: 😥
+  - text: 😢
+  utter_react_positive:
+  - text: 😄
+  - text: 😊
+  - text: 👏
+  - text: 😍
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_awesome:
+  - text: "you can ask me something like 'where uni rostock is located' or 'what is email address of uni rostock' "
+  utter_greet_name_again:
+  - text: that is very nice that you want confirm your name, but i know your have nice name {name}!, how i can help you?
+  utter_greet_name_first_time:
+  - text: Hey {name}!, how i can help you?
+actions:
+- action_check_mentioned_things
+- action_greet_user
+- action_set_uni_rostock_preference
+- utter_asking_for_address
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

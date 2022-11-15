@@ -1,61 +1,62 @@
 version: "3.1"
-
 nlu:
-
+- intent: asking_for_starting
+  examples: |
+    - how i can get started
+    - get started
+    - i need to get started with you and to get the help
+    - i need to know your services
+    - what are the services that you offer
+    - how it can be get started with you
 - intent: asking_for_address
   examples: |
-   - what is the address of uni Rostock?
-   - tell me pelase about the uni Rostock address
-   - Uni Rostock address
-   - Address of university
-
+    - what is the address of uni Rostock?
+    - tell me pelase about the uni Rostock address
+    - Uni Rostock address
+    - Address of university
+    - where is uni rostock?
+    - where located uni rostock?
+    - where is uni rostock
 - intent: asking_for_email
   examples: |
-   - Give me the email
-   - i want to know the email of uni rostok
-   - could you give me the email of uni rostock 
-   - what is the email of uni rostock
-   - Uni Rostock email
-   - email 
-  
+    - Give me the email
+    - i want to know the email of uni rostok
+    - could you give me the email of uni rostock
+    - what is the email of uni rostock
+    - Uni Rostock email
+    - email
 - intent: asking_for_language_skills
   examples: |
-   - What language skills are required for a guest student?
-   - the language skills for guest student 
-   - what are the necssary language skills for international students?
-   - language skills for internaional students
-
+    - What language skills are required for a guest student?
+    - the language skills for guest student
+    - what are the necssary language skills for international students?
+    - language skills for internaional students
 - intent: asking_for_ariving_to_rostock
   examples: |
-   - What do I need to do first when I arrive in Rostock? 
-   - the first thing i need to do when i am arriving to uni rostock?
-   - can you tell me, what should i do when i will arivie to rostock?
-   - arriving to rostock
-
-
+    - What do I need to do first when I arrive in Rostock?
+    - the first thing i need to do when i am arriving to uni rostock?
+    - can you tell me, what should i do when i will arivie to rostock?
+    - arriving to rostock
 - intent: asking_for_live_cost_in_Rostock
   examples: |
-   - how much mony i need per month?
-   - life costs in Rostock
-   - the needed mony for life cost in Rostock
-   - How much money do I need in Rostock?
-
+    - how much mony i need per month?
+    - life costs in Rostock
+    - the needed mony for life cost in Rostock
+    - How much money do I need in Rostock?
 - intent: asking_for_Residence_in_Rostock
   examples: |
-   - i need residence please
-   - i need to book room at uni rostock
-   - booking room during the study
-   - i need permenant residence at uni rostock during the study
-
-
+    - i need residence please
+    - i need to book room at uni rostock
+    - booking room during the study
+    - i need permenant residence at uni rostock during the study
 - intent: asking_for_help
   examples: |
-   - i need help please
-   - can you please help me
-   - i need your help please 
-   - Help please
-   - help me
-
+    - i need help please
+    - can you please help me
+    - i need your help please
+    - Help please
+    - help me
+    - tell me about your services
 - intent: enter_data
   examples: |
     - my name is [aws](name)
@@ -74,9 +75,9 @@ nlu:
     - Hello, my name is [Johhan](name)
     - [Hosma](name)
     - [Amer](name)
-    - [johann@outlook.de](email)
+    - my email is [johann@outlook.de](email)
     - [mundt@gamil.com](email)
-  
+    - my name is [aws](name)
 - intent: out_of_scope
   examples: |
     - The weather is good
@@ -90,9 +91,8 @@ nlu:
     - 卧槽
     - مرحبا
     - هل تستطيعين فهم العربية
-    - كيف حالك 
-
-- intent: asking_what_is_my_name
+    - كيف حالك
+- intent: asking_about_mentioned_things
   examples: |
     - Can you tell me my name?
     - Can you tell me what I am called?
@@ -105,8 +105,8 @@ nlu:
     - I'd like to know my name
     - I'd like to know what my name is
     - Inform me what my name is
-    
-
+    - what is my name?
+    - What is my name?
 - intent: chitchat_ask_howdoing
   examples: |
     - Ahoy matey how are you?
@@ -120,7 +120,6 @@ nlu:
     - What's up man
     - and you
     - are you alright
-
 - intent: thank
   examples: |
     - Cool. Thanks
@@ -133,10 +132,6 @@ nlu:
     - Thanks bot
     - Thanks for that
     - Thanks!
- 
-  
-
-
 - intent: greet
   examples: |
     - hey
@@ -152,7 +147,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hello, my name is [aws](name)
+    - good morining, My name is [lois](name)
 - intent: goodbye
   examples: |
     - cu
@@ -165,7 +161,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -174,7 +169,9 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - Yes please
+    - yse please
+    - yes, i need that
 - intent: deny
   examples: |
     - no
@@ -184,7 +181,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -201,7 +197,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -218,7 +213,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?

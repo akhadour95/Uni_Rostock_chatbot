@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+  - story: User uni rostock music
+    steps:
+    - intent: asking_for_starting
+    - action: utter_askig_for_starting
+    - intent: affirm
+    - action: action_set_uni_rostock_preference
+    - slot_was_set:
+      - like_uni_rostock: True
+    - action: utter_awesome
+
+  - story: User doesn't like music
+    steps:
+    - intent: asking_for_starting
+    - action: utter_askig_for_starting
+    - intent: deny
+    - action: action_set_uni_rostock_preference
+    - slot_was_set:
+      - like_uni_rostock: False
+    - action: utter_goodbye
+
+  
+  - story: mentioned things story
+    steps:
+     - or:
+       - intent: greet
+       - intent: enter_data
+         entities:
+         - name: akela
+       - slot_was_set:
+         -  name: akela
+     - action: action_greet_user
+     - intent: asking_for_address
+     - action: utter_asking_for_address
+     - intent: asking_about_mentioned_things
+     - action: action_check_mentioned_things  
+
+
+

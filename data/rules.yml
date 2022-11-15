@@ -1,13 +1,58 @@
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
+ 
+- rule: Address_rule 
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: asking_for_address
+  - action: utter_asking_for_address
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: E-mail_rule
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: asking_for_email
+  - action: utter_asking_for_email
+
+
+- rule: Language_skills_rule
+  steps:
+  - intent: asking_for_language_skills
+  - action: utter_asking_for_language_skills
+
+- rule: Arrivie_to_rostok_rule
+  steps:
+  - intent: asking_for_ariving_to_rostock
+  - action: utter_asking_for_ariving_to_rostock
+
+- rule: Ask_for_live_cost_in_Rostock_rule
+  steps:
+  - intent: asking_for_live_cost_in_Rostock
+  - action: utter_asking_for_live_cost_in_Rostock
+
+- rule: Help_rule
+  steps:
+  - intent: asking_for_help
+  - action: utter_asking_for_help
+
+- rule: Ask_for_residence_rule
+  steps:
+  - intent: asking_for_Residence_in_Rostock
+  - action: utter_asking_for_residence
+
+
+- rule: Out_of_scope_rule
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: Chitchat_rule
+  steps:
+  - intent: chitchat_ask_howdoing
+  - action: utter_chitchat_ask_howdoing
+
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+
