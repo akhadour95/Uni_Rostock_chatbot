@@ -57,6 +57,7 @@ nlu:
     - Help please
     - help me
     - tell me about your services
+
 - intent: enter_data
   examples: |
     - my name is [aws](name)
@@ -68,7 +69,7 @@ nlu:
     - I am [name](name)
     - [a@outlook.de](email)
     - [aws@oulook.de](email)
-    - [ahmad@yahoo.com](email)
+    - [b@yahoo.com](email)
     - hi, my name is [aws](name)
     - hello, my name is [rawann](name)
     - Moin, my name is [Birger](name)
@@ -78,6 +79,9 @@ nlu:
     - my email is [johann@outlook.de](email)
     - [mundt@gamil.com](email)
     - my name is [aws](name)
+
+# out_of_the scope und chichat intents
+
 - intent: out_of_scope
   examples: |
     - The weather is good
@@ -92,21 +96,7 @@ nlu:
     - مرحبا
     - هل تستطيعين فهم العربية
     - كيف حالك
-- intent: asking_about_mentioned_things
-  examples: |
-    - Can you tell me my name?
-    - Can you tell me what I am called?
-    - Do I have a name?
-    - Do I have a name? What is it?
-    - Do you know my name?
-    - Do you know what my name is?
-    - Explain my name to me.
-    - I have a name, what is it?
-    - I'd like to know my name
-    - I'd like to know what my name is
-    - Inform me what my name is
-    - what is my name?
-    - What is my name?
+
 - intent: chitchat_ask_howdoing
   examples: |
     - Ahoy matey how are you?
@@ -120,6 +110,8 @@ nlu:
     - What's up man
     - and you
     - are you alright
+
+
 - intent: thank
   examples: |
     - Cool. Thanks
@@ -219,3 +211,19 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: asking_about_mentioned_things
+  examples: |
+    - Can you tell me my name?
+    - Can you tell me what I am called?
+    - Do I have a name?
+    - Do I have a name? What is it?
+    - Do you know my name?
+    - Do you know what my name is?
+    - Explain my name to me.
+    - I have a name, what is it?
+    - I'd like to know my name
+    - I'd like to know what my name is
+    - Inform me what my name is
+    - what is my name?
+    - What is my name?

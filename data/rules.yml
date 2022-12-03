@@ -12,7 +12,6 @@ rules:
   - intent: asking_for_email
   - action: utter_asking_for_email
 
-
 - rule: Language_skills_rule
   steps:
   - intent: asking_for_language_skills
@@ -38,6 +37,7 @@ rules:
   - intent: asking_for_Residence_in_Rostock
   - action: utter_asking_for_residence
 
+#### Out_of_the scope / Chitchat rules
 
 - rule: Out_of_scope_rule
   steps:
@@ -49,6 +49,9 @@ rules:
   - intent: chitchat_ask_howdoing
   - action: utter_chitchat_ask_howdoing
 
+
+
+### fallback rule
 
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:

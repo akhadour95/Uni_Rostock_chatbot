@@ -53,11 +53,8 @@ class ActionGreetUser(Action):
         domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
-        print(intent)
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-        print(name_entity)
         name_is_asked = tracker.get_slot("name_is_asked")
-        print(name_is_asked)
         user_name = tracker.get_slot("name")
         
         if (intent == "greet" or intent== "enter_data") and name_is_asked == True:
@@ -72,13 +69,10 @@ class ActionGreetUser(Action):
             return []
         
         if (intent== "enter_data") and name_is_asked == False:
-            print(" iam hier hello")
             if  name_entity:
-                print(" iam hier again hello")
                 dispatcher.utter_message(response="utter_greet_name_first_time", name=name_entity)
                 return [SlotSet("name_is_asked", True)]
             else:
-                print(" No name")
                 dispatcher.utter_message(response="utter_greet_noname")
                 return []
          

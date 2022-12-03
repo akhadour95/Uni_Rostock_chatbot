@@ -12,6 +12,7 @@ intents:
 - bot_challenge
 - chitchat_ask_howdoing
 - deny
+- thank
 - enter_data:
     use_entities: true
 - goodbye
